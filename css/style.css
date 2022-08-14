@@ -3544,6 +3544,7 @@ input:not(:focus):valid ~ .floating-label {
   }
   .section-2-all {
     padding-top: 300px;
+    height: 110vh;
   }
   .section-2 {
     position: relative;
@@ -3578,7 +3579,7 @@ input:not(:focus):valid ~ .floating-label {
     position: relative;
   }
   .slider-2-all-content-bg {
-    height: calc (100 - 3vw);
+    height: 70vh;
     background-color: #e9ecf0;
   }
   .slider-2-content {
@@ -6409,6 +6410,7 @@ input:not(:focus):valid ~ .floating-label {
   }
   .section-2-all {
     padding-top: 300px;
+    height:110vh;
   }
   .section-2 {
     position: relative;
@@ -6444,7 +6446,7 @@ input:not(:focus):valid ~ .floating-label {
   }
   .slider-2-all-content-bg {
     background-color: #e9ecf0;
-    height: calc (100 - 3vw);
+    height: 70vh;
   }
   .slider-2-content {
     width: 100%;
