@@ -520,7 +520,7 @@ document.getElementById("allrange").innerHTML = ((document.getElementById("value
 document.getElementById("allrangebirbank").innerHTML = ((document.getElementById("valuekredit").value /  document.getElementById("valuemonth").value +(((document.getElementById("valuekredit").value /  document.getElementById("valuemonth").value))*0.0338374))).toFixed(2)
 
 function show_value1(x) {
-  document.getElementById("mebleg").innerHTML = x;
+  document.getElementById("mebleg").value = x;
   let k = 0;
   if (+document.getElementById("valuemonth").value === 3) {
     k = 0.0338374;
@@ -647,7 +647,7 @@ function show_value1(x) {
   document.getElementById("allrange").innerHTML = z;
 }
 function show_value2(y) {
-  document.getElementById("muddet").innerHTML = y;
+  document.getElementById("muddet").value = y;
   let k = 0;
   if (+y === 3) {
     k = 0.0338374;
