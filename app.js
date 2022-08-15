@@ -281,10 +281,14 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $("#help-toggle-res").click(function () {
-    $(".section-3-help-res-all").fadeIn(100);
+    $(".help-sec-res-all").fadeIn(100);
+    $(".mainnn").hide()
+    $(".all-head").hide()
   });
   $("#close-help").click(function () {
-    $(".section-3-help-res-all").fadeOut(100);
+    $(".help-sec-res-all").hide(100);
+    $(".mainnn").show()
+    $(".all-head").show()
   });
 });
 
