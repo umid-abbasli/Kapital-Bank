@@ -235,10 +235,14 @@ body {
   color: #000;
 }
 .navbar-2-birbank a {
-  padding: 6px 10px 8px 10px;
   border-radius: 8px;
-  background-color: #f45369;
   font-family: "semiregular";
+}
+.navbar-2-birbank a img{
+  width: 100px;
+  height: 32px;
+  min-width: 60px;
+  min-height: 27px;
 }
 .kartlar-dropdown,
 .kredit-dropdown,
@@ -425,9 +429,16 @@ body {
 .smc-2 img {
   margin-top: 27.5px;
   height: 90%;
-
+  max-width: 500px;
   transition: 1s;
   width: 310px;
+}
+.smc-2 img[id="clock"] {
+  margin-top: 27.5px;
+  height: 90%;
+  max-width: 500px;
+  transition: 1s;
+  width: 450px !important;
 }
 .smc-3 {
   width: 100px;
@@ -2717,14 +2728,16 @@ input:not(:focus):valid ~ .floating-label {
   padding: 3px 10px;
   border-radius: 8px;
 }
-.footer-2-cont-2-all-tel span{
+.footer-2-cont-2-all-tel a span{
   color: #fff;
   margin-left: 3px;
+  color: #dc3545;
   font-size: 20px;
   font-weight: 600;
 }
-.footer-2-cont-2-all-tel i{
+.footer-2-cont-2-all-tel a i{
   font-size: 20px;
+  color: #dc3545;
 }
 .footer-2-cont-2-all-icon{
   display: flex;
@@ -5619,13 +5632,13 @@ input:not(:focus):valid ~ .floating-label {
   padding: 3px 10px;
   border-radius: 8px;
 }
-.footer-2-cont-2-all-tel span{
+.footer-2-cont-2-all-tel a span{
   color: #fff;
   margin-left: 3px;
   font-size: 20px;
   font-weight: 600;
 }
-.footer-2-cont-2-all-tel i{
+.footer-2-cont-2-all-tel a i{
   font-size: 20px;
 }
 .footer-2-cont-2-all-icon{
@@ -8442,13 +8455,13 @@ input:not(:focus):valid ~ .floating-label {
   padding: 3px 10px;
   border-radius: 8px;
 }
-.footer-2-cont-2-all-tel span{
+.footer-2-cont-2-all-tel a span{
   color: #fff;
   margin-left: 3px;
   font-size: 20px;
   font-weight: 600;
 }
-.footer-2-cont-2-all-tel i{
+.footer-2-cont-2-all-tel a i{
   font-size: 20px;
 }
 .footer-2-cont-2-all-icon{
@@ -9180,7 +9193,7 @@ input:not(:focus):valid ~ .floating-label {
   }
 
   .slider-menu {
-    height: 68vh;
+    height: calc (100 - 3vw);
     background: #e8ecf1;
     position: relative;
     z-index: 20;
@@ -9198,99 +9211,85 @@ input:not(:focus):valid ~ .floating-label {
     height: 100vh !important;
   }
   .slider1-menu-content {
-    display: inherit;
+    display: flex;
     justify-content: space-between;
-    position: relative;
-    height: 65vh;
-    padding: 0 0 50px 0;
   }
-
+  
   .smc-1 {
-    width: 100%;
-    position: absolute;
-    top: 58%;
+    width: 80%;
     text-align: center;
-    height: 50%;
   }
   .smc-1 h2 {
-    font-size: 28px !important;
-    margin: 0 0 20px 0 !important;
+    font-size: 34px !important;
+    margin: 40px 0 20px 0 !important;
     font-weight: 600;
   }
-  .smc-1 h2[id="ipoteka-res"],
-  .smc-1 h2[id="is-h2"],
+  .smc-1 h2[id="ipoteka-res"] {
+    font-size: 34px !important;
+    margin: 80px 0 0 0 !important;
+    font-weight: 600;
+  }
+  .smc-1 h2[id="is-h2"] {
+    font-size: 34px !important;
+    margin: 70px 0 0 0 !important;
+    font-weight: 600;
+  }
   .smc-1 h2[id="birbank"] {
-    font-size: 25px !important;
-    margin: 0 0 20px 0 !important;
+    font-size: 34px !important;
+    margin: 40px 0 0 0 !important;
     font-weight: 600;
   }
-
   .smc-1 ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 70%;
-    text-align: center;
     padding: 0 !important;
-    margin: 0 auto 10px !important;
-  }
-  .smc-1 ul[id="center"] {
-    display: inherit;
-    justify-content: inherit;
-    width: 70%;
-    text-align: center;
-    padding: 0 0 10px 0 !important;
-    margin: 0 auto 10px !important;
+    margin: 0 auto 10px  !important;
   }
   .smc-1 ul li {
-    font-size: 20px;
+    font-size: 28px;
     color: #f45369;
     letter-spacing: 0.7px;
     font-weight: 600;
   }
-  .smc-1 ul li[id="pulsuz"] {
-    font-size: 27px;
-    color: #ff0033;
-    letter-spacing: 0.7px;
-    font-weight: 900 !important;
-  }
   .smc-1 ul li[id="ipo-res-li"] {
-    font-size: 14px;
-    width: 75%;
-    margin: 0 auto !important;
-    color: #f45369;
+    font-size: 16px;
     letter-spacing: 0.7px;
+    margin: 7px 0;
     font-weight: 400;
   }
   .smc-1 ul li[id="is"] {
-    font-size: 14px;
-    width: 75%;
-    margin: 10px auto 15px !important;
-    color: #f45369;
+    font-size: 16px;
     letter-spacing: 0.7px;
     font-weight: 400;
+    margin: 10px 0 20px 0 !important;
   }
-  .smc-1 ul li[id="kart-res-none"] {
-    display: none;
+  .smc-1 ul li[id="pulsuz"] {
+    font-size: 30px;
+    letter-spacing: 0.7px;
+    font-weight: 800 !important;
+    color: #ff0033;
+    margin: 10px 0 20px 0 !important;
   }
   .smc-1 ul li p {
-    font-size: 14px;
+    font-size: 16px;
     color: #383838;
     margin-top: 10px;
     font-weight: 400;
   }
+  
   .smc-1 button {
-    width: 270px;
+    width: 90%;
     background-color: #f45369;
     border-radius: 8px;
     display: inline-block;
-    padding: 0 17px 0;
+    padding: 9px 20px 11px;
     font-size: 24px;
     margin: 0 !important;
     color: #fff !important;
     line-height: 30px;
     text-align: center;
     border: none;
-    height: 40px;
     cursor: pointer;
     transition: 0.3s linear;
   }
@@ -9298,31 +9297,35 @@ input:not(:focus):valid ~ .floating-label {
     background-color: #ef3e42;
     outline: none;
   }
-
+  
   .smc-2 {
-    height: 50%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    background-color: #fff;
+    height: calc(100 -3vw);
+    width: 58%;
+    min-width: 30%;
+    overflow: hidden;
     text-align: center;
   }
   .smc-2 img {
-    max-width: 80%;
-    margin: 25px auto;
+    margin-top: 65px;
+    transition: 1s;
+    width: 320px !important;
+    min-width: 240px;
+    max-width: 400px;
+    height: 80%;
+    text-align: start;
   }
   .smc-2 img[id="clock"] {
-    height: 75%;
-    max-width: 300px;
-    margin: 40px auto;
+    margin-top: 40px;
+    height: 70%;
+    max-width: 500px;
+    transition: 1s;
+    width: 370px !important;
   }
   .smc-3 {
-    width: 90%;
-    height: 15% !important;
-    position: absolute;
-    top: 35%;
-    right: 5%;
-    left: 5%;
+    width: 150px;
+    height: 42vh;
+    position: relative;
+    background-color: transparent !important;
   }
   .smc-3 button {
     background-color: #fff !important;
@@ -11341,13 +11344,13 @@ input:not(:focus):valid ~ .floating-label {
   padding: 3px 10px;
   border-radius: 8px;
 }
-.footer-2-cont-2-all-tel span{
+.footer-2-cont-2-all-tel a span{
   color: #fff;
   margin-left: 3px;
   font-size: 20px;
   font-weight: 600;
 }
-.footer-2-cont-2-all-tel i{
+.footer-2-cont-2-all-tel a i{
   font-size: 20px;
 }
 .footer-2-cont-2-all-icon{
