@@ -1689,8 +1689,14 @@ document.getElementById("qiymet-calc4").innerHTML = ((+document.getElementById("
       $("#slide-6-6").css({"color":"#000"})
       $("#slide-6-6-bg").css({"background":"#E8ECF1","color":"#000","border":"1px solid #ef8e9e"})
     })
- 
+  
   })
+  for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
+    e.style.setProperty('--value', e.value);
+    e.style.setProperty('--min', e.min == '' ? '0' : e.min);
+    e.style.setProperty('--max', e.max == '' ? '100' : e.max);
+    e.addEventListener('input', () => e.style.setProperty('--value', e.value));
+  }
 
 
  

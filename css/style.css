@@ -6,7 +6,7 @@
   font-family: semiregular;
   src: url(../SourceSansPro-Regular.otf);
 }
-
+@import "compass/css3";
 body {
   position: relative;
   font-family: "semiregular" !important;
@@ -1120,48 +1120,132 @@ input::-webkit-inner-spin-button {
 .scroll-2-head input[id="muddetbirbank"]{
   position: absolute;
   font-size: 18px;
-  top: 30px;
+  top: 0px;
   outline: none;
   font-weight: 500;
   color: #000;
   background-color: transparent;
   -moz-appearance: textfield;
-  height: 20px;
+  height: 80px;
   left: 30px;
 }
 .scroll-1-head input{
   position: absolute;
-  bottom: -2px;
-  left: 8px;
-  width: 97.7%;
+  bottom: -1.8px;
+  left: 14px;
+  width: 96.4%;
   border: none;
-  height: 5px;
   color: #fff;
 }
-.scroll-1-head input::-moz-range-progress {
-  background-color: #f45369;
-  height: 2.3px;
+input[type=range].slide-1-head::-webkit-slider-runnable-track[id="muddetbirbank"]{
+  height: 2px !important;
 }
-.scroll-1-head input::-moz-range-track {
- background-color: #eaeef2;
- border: none;
- height: 2.3px;
+
+/*generated with Input range slider CSS style generator (version 20211225)
+https://toughengineer.github.io/demo/slider-styler*/
+input[type=range].slide-1-head {
+  height: 1px;
+  -webkit-appearance: none;
 }
-.scroll-1-head input::-moz-range-thumb{
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 5px solid #fff;
-  background-color: #f45369;
+
+/*progress support*/
+input[type=range].slide-1-head.slider-progress {
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--value) - var(--min)) / var(--range));
+  --sx: calc(0.5 * 20px + var(--ratio) * (100% - 20px));
+}
+
+input[type=range].slide-1-head:focus {
+  outline: none;
+}
+
+/*webkit*/
+input[type=range].slide-1-head::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 32px;
   cursor: pointer;
+  background: #FF0000;
+  border: 5px solid #FFFFFF;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+  margin-top: calc(3px * 0.5 - max(20px * 0.5,5px));
+}
+
+input[type=range].slide-1-head::-webkit-slider-runnable-track {
+  height: 2.5px;
+  border: none;
+  border-radius: 0.5em;
+  background: #efefef;
+  box-shadow: none;
+}
+
+input[type=range].slide-1-head.slider-progress::-webkit-slider-runnable-track {
+  background: linear-gradient(#F80000,#F80000) 0/var(--sx) 100% no-repeat, #efefef;
+}
+
+/*mozilla*/
+input[type=range].slide-1-head::-moz-range-thumb {
+  width: max(calc(20px - 5px - 5px),0px);
+  height: max(calc(20px - 5px - 5px),0px);
+  border-radius: 32px;
+  background: #FF0000;
+  border: 5px solid #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
 }
-.scroll-1-head input::-moz-fill-lower{
-  background-color: #f45369;
+
+input[type=range].slide-1-head::-moz-range-track {
+  height: 3px;
+  border: none;
+  border-radius: 0.5em;
+  background: #efefef;
+  box-shadow: none;
 }
-.scroll-1-head input::-moz-fill-upper{
-  background-color: #fff;
+
+input[type=range].slide-1-head.slider-progress::-moz-range-track {
+  background: linear-gradient(#F80000,#F80000) 0/var(--sx) 100% no-repeat, #efefef;
 }
+
+/*ms*/
+input[type=range].slide-1-head::-ms-fill-upper {
+  background: transparent;
+  border-color: transparent;
+}
+
+input[type=range].slide-1-head::-ms-fill-lower {
+  background: transparent;
+  border-color: transparent;
+}
+
+input[type=range].slide-1-head::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 32px;
+  background: #FF0000;
+  border: 5px solid #FFFFFF;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+input[type=range].slide-1-head::-ms-track {
+  height: 3px;
+  border-radius: 0.5em;
+  background: #efefef;
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+input[type=range].slide-1-head.slider-progress::-ms-fill-lower {
+  height: 3px;
+  border-radius: 0.5em 0 0 0.5em;
+  margin: -undefined 0 -undefined -undefined;
+  background: #F80000;
+  border: none;
+  border-right-width: 0;
+}
+
 .scroll-1-content{
   margin: 15px 0;
   display: flex;
@@ -1196,13 +1280,13 @@ input::-webkit-inner-spin-button {
 .scroll-2-head input[id="muddet"]{
   position: absolute;
   font-size: 18px;
-  top: 30px;
+  top: 1px;
   outline: none;
   font-weight: 500;
   color: #000;
   background-color: transparent;
   -moz-appearance: textfield;
-  height: 20px;
+  height: 80px;
   left: 30px;
 }
 .scroll-2-head input{
@@ -2368,15 +2452,28 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   height: 50px;
   justify-content: space-between;
+  position: relative;
 }
+
 .section-7-2-input-all input{
   width: 70%;
   border: none;
   outline: none;
   font-size: 24px;
   background-color: transparent;
-  margin-left: 15px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0 40% 0 5%;
+  border-radius: 10px;
     -moz-appearance: textfield;
+}
+.section-7-2-input-all input:focus{
+  border: 2px solid blue;
+  padding: 0 40% 0 5%;
+}
+.section-7-2-input-all input::-ms-value{
+  margin-left: 15px;
 }
 .sec-7-2-valyuta{
   border: 1px solid #dc3545;
@@ -2389,8 +2486,10 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   justify-content: space-evenly;
   margin-right: 5px;
+  margin-left: 79%;
   position: relative;
 }
+
 .sec-7-2-valyuta h2{
   font-size: 16px;
   font-weight: 400;
@@ -5130,7 +5229,7 @@ input:not(:focus):valid ~ .floating-label {
   font-size: 14px;
   text-align: start;
   line-height: 25px;
-  margin-left: 10px;
+  margin-left: 40px;
 }
 .swiper-button-next{
   right: 1% !important;
@@ -5249,10 +5348,21 @@ input:not(:focus):valid ~ .floating-label {
   width: 70%;
   border: none;
   outline: none;
-  font-size: 18px;
+  font-size: 24px;
   background-color: transparent;
-  margin-left: 15px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0 40% 0 5%;
+  border-radius: 10px;
     -moz-appearance: textfield;
+}
+.section-7-2-input-all input:focus{
+  border: 2px solid blue;
+  padding: 0 40% 0 5%;
+}
+.section-7-2-input-all input::-ms-value{
+  margin-left: 15px;
 }
 .sec-7-2-valyuta{
   border: 1px solid #dc3545;
@@ -7921,7 +8031,7 @@ input:not(:focus):valid ~ .floating-label {
   font-size: 14px;
   text-align: start;
   line-height: 25px;
-  margin-left: 10px;
+  margin-left: 40px;
 }
 .swiper-button-next{
   right: 1% !important;
@@ -8041,19 +8151,31 @@ input:not(:focus):valid ~ .floating-label {
   width: 70%;
   border: none;
   outline: none;
-  font-size: 18px;
+  font-size: 24px;
   background-color: transparent;
-  margin-left: 15px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0 40% 0 5%;
+  border-radius: 10px;
     -moz-appearance: textfield;
+}
+.section-7-2-input-all input:focus{
+  border: 2px solid blue;
+  padding: 0 40% 0 5%;
+}
+.section-7-2-input-all input::-ms-value{
+  margin-left: 15px;
 }
 .sec-7-2-valyuta{
   border: 1px solid #dc3545;
   height: 40px;
   margin-top: 5px;
-  min-width: 70px;
+  min-width: 50px;
   max-width: 25%;
   cursor: pointer;
   border-radius: 8px;
+  margin-left: 77%;
   display: flex;
   justify-content: space-evenly;
   margin-right: 5px;
@@ -8062,7 +8184,7 @@ input:not(:focus):valid ~ .floating-label {
 .sec-7-2-valyuta h2{
   font-size: 16px;
   font-weight: 400;
-  margin: 9px 0 0 18%;
+  margin: 9px 0 0 10%;
   text-align: start;
 }
 .azn-7{
@@ -8090,7 +8212,7 @@ input:not(:focus):valid ~ .floating-label {
   color: #dc3545;
   font-size: 18px;
   position: absolute;
-  right: 15%;
+  right: 8%;
   top: 5.5px;
 }
 .sec-7-2-input-head p{
