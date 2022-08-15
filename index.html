@@ -1178,9 +1178,9 @@ help-imghelp      <i id="close-help" class="fa-solid fa-xmark"></i>
                   <div class="scroll-1">
                     <div class="scroll-1-head">
                       <h2>Məbləğ</h2>
-                      <input min="300" type="number" onscroll="show_value1(this.value);" id="mebleg" value="10000" />
+                      <input min="300" type="number" onchange="show_value1(this.value);" id="mebleg" value="10000" />
                       <input min="300" class="slide-1-head slider-progress" value="10000" id="valuekredit" max="30000" step="100" type="range"
-                        onpointermove="show_value1(this.value);">
+                        onscroll="show_value1(this.value);">
                     </div>
                     <div class="scroll-1-content"><span>300</span><span>30000</span></div>
                     <div class="scroll-2-head">
