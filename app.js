@@ -1483,7 +1483,7 @@ document.getElementById("qiymet-calc4-2").innerHTML = ((+document.getElementById
 document.getElementById("qiymet-calc4").innerHTML = ((+document.getElementById("calc-4-mebleg").value * 6)/100).toFixed(2)
   function birbank_depozit(x){
     if(+x === 12){
-      document.getElementById("muddetbirbank-dep").value = "12" 
+      document.getElementById("muddetbirbank-dep").innerHTML = "12" 
       document.getElementById("calc4-faiz").innerHTML = "6"
       document.getElementById("calc-faiz-2").innerHTML = "6.5"
       document.getElementById("qiymet-calc4").innerHTML = ((+document.getElementById("calc-4-mebleg").value * 6)/100).toFixed(2)
@@ -1492,7 +1492,7 @@ document.getElementById("qiymet-calc4").innerHTML = ((+document.getElementById("
 
     }
     else if(+x === 20){
-      document.getElementById("muddetbirbank-dep").value = "18" 
+      document.getElementById("muddetbirbank-dep").innerHTML = "18" 
       document.getElementById("calc4-faiz").innerHTML = "6.5"
       document.getElementById("calc-faiz-2").innerHTML = "7"
       document.getElementById("qiymet-calc4").innerHTML = ((+document.getElementById("calc-4-mebleg").value * 9.75)/100).toFixed(2)
@@ -1503,7 +1503,7 @@ document.getElementById("qiymet-calc4").innerHTML = ((+document.getElementById("
   
     
     else if(+x === 28){
-      document.getElementById("muddetbirbank-dep").value = "24" 
+      document.getElementById("muddetbirbank-dep").innerHTML = "24" 
       document.getElementById("calc4-faiz").innerHTML = "7"
       document.getElementById("calc-faiz-2").innerHTML = "7.5"
       document.getElementById("qiymet-calc4").innerHTML = (+document.getElementById("calc-4-mebleg").value * 0.14).toFixed(2)
@@ -1512,7 +1512,7 @@ document.getElementById("qiymet-calc4").innerHTML = ((+document.getElementById("
    
     }
     else if(+x === 36){
-      document.getElementById("muddetbirbank-dep").value = "36"
+      document.getElementById("muddetbirbank-dep").innerHTML= "36"
       document.getElementById("calc4-faiz").innerHTML = "7.5" 
       document.getElementById("calc-faiz-2").innerHTML = "8" 
       document.getElementById("qiymet-calc4").innerHTML = (+document.getElementById("calc-4-mebleg").value * 0.225 ).toFixed(2)
