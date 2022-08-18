@@ -819,8 +819,8 @@ body {
   color: #b9bfc3;
   margin-left: 60%;
 }
-.btn i[id="help-toggle-res"]{
-  display: block;
+i[id="help-toggle-res"]{
+  display:none;
 }
 .btn i[id="help-1-umid"]{
   
@@ -1123,6 +1123,9 @@ input::-webkit-inner-spin-button {
   background-color: #f45369 !important;
   color: #fff !important;
 }
+/* scroll-for-calc-umid */
+
+
 .calc-1{
   display: flex;
   justify-content: space-between;
@@ -1187,9 +1190,7 @@ input::-webkit-inner-spin-button {
   border: none;
   color: #fff;
 }
-input[type=range].slide-1-head::-webkit-slider-runnable-track[id="muddetbirbank"]{
-  height: 2px !important;
-}
+
 
 /*generated with Input range slider CSS style generator (version 20211225)
 https://toughengineer.github.io/demo/slider-styler*/
@@ -1212,8 +1213,8 @@ input[type=range].slide-1-head:focus {
 /*webkit*/
 input[type=range].slide-1-head::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   border-radius: 32px;
   cursor: pointer;
   background: #FF0000;
@@ -1240,6 +1241,7 @@ input[type=range].slide-1-head::-moz-range-thumb {
   height: max(calc(20px - 5px - 5px),0px);
   border-radius: 32px;
   background: #FF0000;
+  cursor: pointer;
   border: 5px solid #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
 }
@@ -1515,11 +1517,7 @@ input[type=range].slide-1-head.slider-progress::-ms-fill-lower {
   color: #fff !important;
   text-align: center;
   border: none;
-  margin-top: 10%;
   cursor: pointer;
-  position: absolute;
-  bottom: 10%;
-  left: 5%;
   margin-bottom: 0;
   transition: .3s linear;
   background-color: #f45369;
@@ -1532,7 +1530,7 @@ input[type=range].slide-1-head.slider-progress::-ms-fill-lower {
 .plus-content p{
   width: 300px;
   text-align: center;
-  margin: 0 auto;
+  margin: 10px auto 0;
   line-height: 25px;
   font-size: 18px;
   color: #ef3e42 ;
@@ -1683,11 +1681,19 @@ input[type=range].slide-1-head.slider-progress::-ms-fill-lower {
   left: 30px;
   position: absolute;
 }
-.scroll-2-ipoteka-head p{
+.scroll-2-ipoteka-head input[id="muddetbirbank-ipo"]{
   position: absolute;
-  font-size: 18px;
-  top: 25px;
-  left: 30px;
+  font-size: 18px !important;
+  top: 13px !important;
+  height: 50px !important;
+  -moz-appearance: textfield;
+  border: none;
+  outline: none;
+  background-color: transparent !important;
+  width: 100% !important;
+  left: 30px !important;
+  
+  color: #000;
 }
 .scroll-2-ipoteka-head input{
   position: absolute;
@@ -1974,16 +1980,29 @@ input:not(:focus):valid ~ .floating-label {
   top: 25px;
   left: 20px;
 }
+.scroll-2-depozit-head input[id="muddetbirbank-dep"]{
+  position: absolute;
+  top: inherit;
+  left: 20px;
+  width: 97%;
+  border: none;
+  border-radius: 50%;
+  height: 50px;
+  color: #000 !important;
+  outline: none;
+  font-size: 18px;
+  background-color: transparent;
+  color: #fff;
+}
 .scroll-2-depozit-head input{
   position: absolute;
-  bottom: -2.5px;
-  left: 9px;
-  width: 98%;
+  bottom: -2px;
+  left: 12px;
+  width: 97%;
   border: none;
   border-radius: 50%;
   height: 5px;
   background-color: transparent;
-  border-top-left-radius: -15px;
   color: #fff;
   border-radius: 50%;
 }
@@ -3695,7 +3714,7 @@ input:not(:focus):valid ~ .floating-label {
   }
   .section-2-all {
     padding-top: 300px;
-    height: 110vh;
+    height: 145vh;
   }
   .section-2 {
     position: relative;
@@ -3726,11 +3745,11 @@ input:not(:focus):valid ~ .floating-label {
   .slider-2-all-content-1 {
     display: inherit;
     justify-content: space-between;
-    height: 80vh;
+    height: 110vh;
     position: relative;
   }
   .slider-2-all-content-bg {
-    height: 70vh;
+    height: 90vh;
     background-color: #e9ecf0;
   }
   .slider-2-content {
@@ -3841,7 +3860,7 @@ input:not(:focus):valid ~ .floating-label {
 
   .section-3-all {
     width: 100%;
-    min-height: calc (100 - 3vw);
+    min-height: 149vh;
     height: 150vh;
     max-height: 160vh;
     padding-top: 50px;
@@ -3954,13 +3973,16 @@ input:not(:focus):valid ~ .floating-label {
   .btn i{
     color: #b9bfc3;
     margin-left: 0%;
-    margin-top: 25px;
-  }
-  .btn i[id="help-toggle-res"]{
-    display: block !important;
+    margin-top: 25px; 
+    margin-right: 5%;
   }
   .btn i[id="help-1-umid"]{
     display: none;
+  }
+ i[id="help-toggle-res"]{
+    color:#b9bfc3 !important ;
+    display: block !important;
+    margin-right: 5%;
   }
   .input-help input::placeholder {
     font-weight: 400 !important;
@@ -4004,6 +4026,8 @@ input:not(:focus):valid ~ .floating-label {
   }
   .fin-icon i[id="help-toggle-res"] {
     display: block !important;
+    margin-right: 5% !important;
+    color: #9d9f9f;
   }
   .section-3-all-checkbox {
     display: flex;
@@ -4443,7 +4467,7 @@ input:not(:focus):valid ~ .floating-label {
 }
 .calc-2-content-2{
   border: 1px solid #d9d9d9;
-  height: 275px;
+  height: calc (100 - 1vw);
   width: 100%;
   border-radius: 12px;
   padding: 0 0 30px 0;
@@ -6583,7 +6607,7 @@ input:not(:focus):valid ~ .floating-label {
   }
   .section-2-all {
     padding-top: 300px;
-    height:110vh;
+    height:151vh;
   }
   .section-2 {
     position: relative;
@@ -6619,7 +6643,7 @@ input:not(:focus):valid ~ .floating-label {
   }
   .slider-2-all-content-bg {
     background-color: #e9ecf0;
-    height: 70vh;
+    height:90vh;
   }
   .slider-2-content {
     width: 100%;
@@ -6729,7 +6753,9 @@ input:not(:focus):valid ~ .floating-label {
 
   .section-3-all {
     width: 100%;
-    height: 120vh;
+    min-height: 130vh;
+    height: 140vh;
+    max-height: 160vh;
     padding-top: 50px;
   }
   .section-3 {
@@ -6766,7 +6792,9 @@ input:not(:focus):valid ~ .floating-label {
     position: absolute;
     top: 240px;
     width: 100%;
-    height: 80vh;
+    min-height: 90vh;
+    max-height: 110vh;
+    height: 95vh;
   }
   .section-3-content-2-all {
     height: 72vh;
@@ -6840,8 +6868,10 @@ input:not(:focus):valid ~ .floating-label {
     margin-left: 0%;
     margin-top: 25px;
   }
-  .btn i[id="help-toggle-res"]{
+   i[id="help-toggle-res"]{
     display: block !important;
+    margin-right: 5% !important;
+    color: #9d9f9f;
   }
   .btn i[id="help-1-umid"]{
     display: none;
@@ -6887,7 +6917,9 @@ input:not(:focus):valid ~ .floating-label {
     display: none;
   }
   .fin-icon i[id="help-toggle-res"] {
-    display: block !important;
+    display: block !important; 
+    margin-right: 5% !important;
+    color: #9d9f9f;
   }
   .section-3-all-checkbox {
     display: flex;
@@ -7336,7 +7368,7 @@ input:not(:focus):valid ~ .floating-label {
 }
 .calc-2-content-2{
   border: 1px solid #d9d9d9;
-  height: 275px;
+  height: calc (100 - 1vw);
   width: 100%;
   border-radius: 12px;
   padding: 0 0 30px 0;
@@ -9541,9 +9573,9 @@ input:not(:focus):valid ~ .floating-label {
 
   .section-3-all {
     width: 100%;
-    min-height: calc (100 - 3vw);
-    height: 150vh;
-    max-height: 160vh;
+    min-height: 149vh;
+    height: 165vh;
+    max-height: 165vh;
     padding-top: 50px;
   }
   .section-3 {
@@ -9580,9 +9612,9 @@ input:not(:focus):valid ~ .floating-label {
     position: absolute;
     top: 290px;
     width: 100%;
-    min-height: calc (100 - 3vw);
-    height: 100%;
-    max-height: 100vh;
+    min-height: 105vh;
+    height: 110vh;
+    max-height: 120vh;
   }
   .section-3-content-2-all {
     height: 72vh;
@@ -9656,8 +9688,10 @@ input:not(:focus):valid ~ .floating-label {
     margin-left: 0%;
     margin-top: 25px;
   }
-  .btn i[id="help-toggle-res"]{
+  i[id="help-toggle-res"]{
     display: block !important;
+    margin-right: 5% !important;
+    color: #9d9f9f;
   }
   .btn i[id="help-1-umid"]{
     display: none;
@@ -9704,6 +9738,8 @@ input:not(:focus):valid ~ .floating-label {
   }
   .fin-icon i[id="help-toggle-res"] {
     display: block !important;
+    margin-right: 5% !important;
+    color: #9d9f9f;
   }
   .section-3-all-checkbox {
     display: flex;
@@ -10145,7 +10181,7 @@ input:not(:focus):valid ~ .floating-label {
 }
 .calc-2-content-2{
   border: 1px solid #d9d9d9;
-  height: 275px;
+  height: calc (100 - 1vw);
   width: 42%;
   border-radius: 12px;
   padding: 0 0 30px 0;

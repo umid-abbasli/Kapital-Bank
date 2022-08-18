@@ -798,7 +798,7 @@ $(document).ready(function () {
 });
 
 function birbank_1(h) {
-  document.getElementById("meblegbribank").innerHTML = h;
+  document.getElementById("meblegbribank").value = h;
   let k = "";
   if (+document.getElementById("birbankmonth").value === 3) {
     k = 0.05758;
@@ -861,7 +861,7 @@ function birbank_1(h) {
 }
 
 function birbank_2(y) {
-  document.getElementById("muddetbirbank").innerHTML = y;
+  document.getElementById("muddetbirbank").value = y;
   let k = 0;
   if (+y === 3) {
     k = 0.05758;
@@ -910,8 +910,10 @@ function birbank_2(y) {
   }
   if (+y >= 18) {
     document.getElementById("calc-2-content-plus").style.display = "block";
+    document.getElementById("calc-2-content-2-button").style.bottom = "35%"
   } else {
     document.getElementById("calc-2-content-plus").style.display = "none";
+    document.getElementById("calc-2-content-2-button").style.bottom = "10%"
   }
   let b = Math.ceil(
     +document.getElementById("birbankkredit").value / y +
@@ -1015,11 +1017,10 @@ $(document).ready(function () {
     $("#ayliq-odenis-2").show()
     
   });
-  $("#ipoteka-calc").mouseenter(function () {
-    $("#ipo-mud").css({ "font-size": "14px", top: "10px" });
-    $("#muddetbirbank-ipo").show();
+  $(".scroll-2-ipoteka-head").click(function () {
+    $("#ipo-mud").css({ "font-size": "14px", top: "10px","transition":".04s" });
+    $("#muddetbirbank-ipo").show(40);
   });
-  $("");
   // $(".ipoteka-qiymet").click(function(){
   //   $("#input-menzil-deyeri").hide()
   // })
@@ -1158,7 +1159,7 @@ inputt2.addEventListener("keypress", function (event) {
 //  }
 
 function birbank_ipoteka(x) {
-    document.getElementById("muddetbirbank-ipo").innerHTML = +x;
+    document.getElementById("muddetbirbank-ipo").value = +x;
     document.getElementById("ipo-reqem-1").innerHTML = 10
     document.getElementById("ipo-reqem-2").innerHTML = 11.5
     if (
@@ -1482,7 +1483,7 @@ document.getElementById("qiymet-calc4-2").innerHTML = ((+document.getElementById
 document.getElementById("qiymet-calc4").innerHTML = ((+document.getElementById("calc-4-mebleg").value * 6)/100).toFixed(2)
   function birbank_depozit(x){
     if(+x === 12){
-      document.getElementById("muddetbirbank-dep").innerHTML = "12" 
+      document.getElementById("muddetbirbank-dep").value = "12" 
       document.getElementById("calc4-faiz").innerHTML = "6"
       document.getElementById("calc-faiz-2").innerHTML = "6.5"
       document.getElementById("qiymet-calc4").innerHTML = ((+document.getElementById("calc-4-mebleg").value * 6)/100).toFixed(2)
@@ -1491,7 +1492,7 @@ document.getElementById("qiymet-calc4").innerHTML = ((+document.getElementById("
 
     }
     else if(+x === 20){
-      document.getElementById("muddetbirbank-dep").innerHTML = "18" 
+      document.getElementById("muddetbirbank-dep").value = "18" 
       document.getElementById("calc4-faiz").innerHTML = "6.5"
       document.getElementById("calc-faiz-2").innerHTML = "7"
       document.getElementById("qiymet-calc4").innerHTML = ((+document.getElementById("calc-4-mebleg").value * 9.75)/100).toFixed(2)
@@ -1502,7 +1503,7 @@ document.getElementById("qiymet-calc4").innerHTML = ((+document.getElementById("
   
     
     else if(+x === 28){
-      document.getElementById("muddetbirbank-dep").innerHTML = "24" 
+      document.getElementById("muddetbirbank-dep").value = "24" 
       document.getElementById("calc4-faiz").innerHTML = "7"
       document.getElementById("calc-faiz-2").innerHTML = "7.5"
       document.getElementById("qiymet-calc4").innerHTML = (+document.getElementById("calc-4-mebleg").value * 0.14).toFixed(2)
@@ -1511,7 +1512,7 @@ document.getElementById("qiymet-calc4").innerHTML = ((+document.getElementById("
    
     }
     else if(+x === 36){
-      document.getElementById("muddetbirbank-dep").innerHTML = "36"
+      document.getElementById("muddetbirbank-dep").value = "36"
       document.getElementById("calc4-faiz").innerHTML = "7.5" 
       document.getElementById("calc-faiz-2").innerHTML = "8" 
       document.getElementById("qiymet-calc4").innerHTML = (+document.getElementById("calc-4-mebleg").value * 0.225 ).toFixed(2)
@@ -1693,7 +1694,48 @@ document.getElementById("qiymet-calc4").innerHTML = ((+document.getElementById("
       $("#slide-6-6").css({"color":"#000"})
       $("#slide-6-6-bg").css({"background":"#E8ECF1","color":"#000","border":"1px solid #ef8e9e"})
     })
-  
+    $("#mebleg").on("change input", function () {
+      $("#valuekredit").attr("value", $("#mebleg").val());
+      let deyer = $("#mebleg").val()
+      $("#valuekredit").css({
+       "--value": deyer
+      });
+    });
+    $("#muddet").on("change input", function () {
+      $("#valuemonth").attr("value", $("#muddet").val());
+      let deyer = $("#muddet").val()
+      $("#valuemonth").css({
+       "--value": deyer
+      });
+    });
+     $("#meblegbribank").on("change input", function () {
+      $("#birbankkredit").attr("value", $("#meblegbribank").val());
+      let deyer = $("#meblegbribank").val()
+      $("#birbankkredit").css({
+       "--value": deyer
+      });
+    });
+    $("#muddetbirbank").on("change input", function () {
+      $("#birbankmonth").attr("value", $("#muddetbirbank").val());
+      let deyer = $("#muddetbirbank").val()
+      $("#birbankmonth").css({
+       "--value": deyer
+      });
+    });
+    $("#muddetbirbank-ipo").on("change input", function () {
+      $("#ipoteka-calc").attr("value", $("#muddetbirbank-ipo").val());
+      let deyer = $("#muddetbirbank-ipo").val()
+      $("#ipoteka-calc").css({
+       "--value": deyer
+      });
+    });
+    $("#muddetbirbank-dep").on("change input", function () {
+      $("#depozit-calc").attr("value", $("#muddetbirbank-dep").val());
+      let deyer = $("#muddetbirbank-dep").val()
+      $("#depozit-calc").css({
+       "--value": deyer
+      });
+    });
   })
   for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
     e.style.setProperty('--value', e.value);
