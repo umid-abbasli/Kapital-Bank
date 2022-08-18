@@ -2222,6 +2222,7 @@ input:not(:focus):valid ~ .floating-label {
   outline: none;
   position: absolute;
   bottom: 10%;
+  background-color: transparent;
 }
 .section-5-1-1 button a{
   color: #dc3545; 
