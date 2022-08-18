@@ -2224,7 +2224,8 @@ input:not(:focus):valid ~ .floating-label {
   bottom: 10%;
 }
 .section-5-1-1 button a{
-  color: #dc3545; background-color: transparent;
+  color: #dc3545; 
+  background-color: transparent;
 }
 .section-5-1-1 button a i{
   margin-left: 5px;
