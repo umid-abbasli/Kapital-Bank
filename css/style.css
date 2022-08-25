@@ -2939,6 +2939,9 @@ input:not(:focus):valid ~ .floating-label {
   .mainnn{
     height: calc (100 - 3vh);
   }
+  .chat-3-all-responsive{
+    display: block;
+  }
   .all-navbar-1-bgcolor {
     border-bottom: 2px solid #e8ecf1;
     height: 70px !important;
@@ -5826,6 +5829,9 @@ input:not(:focus):valid ~ .floating-label {
     cursor: pointer;
     color: #b9bfc3;
   }
+  .chat-3-all-responsive{
+    display: block;
+  }
   body {
     overflow: visible !important;
   }
@@ -8655,6 +8661,9 @@ input:not(:focus):valid ~ .floating-label {
  @media only screen and (min-width: 780px) and (max-width:987px){
   body {
     overflow: visible !important;
+  }
+  .chat-3-all-responsive{
+    display: block;
   }
   .mainnn{
     height: calc (100 - 3vh);

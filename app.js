@@ -9,7 +9,7 @@ $(document).ready(function () {
 $(document).ready(function () {
   $(".hamburger").click(function () {
     $(".navbar-1-all").hide(1);
-    $("#chat-3").show()
+    $(".chat-3-all-responsive").show()
     $(".navbar-1-responsive").fadeToggle(500);
     $(".hamburger-content").fadeToggle(500);
     $(".all-navbar-1-bgcolor").fadeOut(1);
@@ -22,7 +22,7 @@ $(document).ready(function () {
     $(".navbar-1-all").fadeToggle(500);
     $(".navbar-1-responsive").hide(1);
     $(".hamburger-content").fadeToggle(1);
-    $("#chat-3").hide()
+    $(".chat-3-all-responsive").hide()
     $(".fiziki").toggle(10);
     $(".all-navbar-2").fadeIn(1);
     $(".all-navbar-1-bgcolor").fadeIn(1);
@@ -1743,7 +1743,7 @@ document.getElementById("qiymet-calc4").innerHTML = ((+document.getElementById("
      $(".chat-3-all").fadeIn(100)
     })
     $("#close-chat").click(function(){
-      $(".chat-3-all").hide()
+      $(".chat-3-all").fadeOut(10)
     })
     $(document).scroll(function() {
       let y = $(this).scrollTop();
