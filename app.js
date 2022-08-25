@@ -9,17 +9,20 @@ $(document).ready(function () {
 $(document).ready(function () {
   $(".hamburger").click(function () {
     $(".navbar-1-all").hide(1);
+    $("#chat-3").show()
     $(".navbar-1-responsive").fadeToggle(500);
     $(".hamburger-content").fadeToggle(500);
     $(".all-navbar-1-bgcolor").fadeOut(1);
     $(".fiziki").toggle(10);
     $(".mainnn").fadeOut(10);
+    $(".chat-icon-2").show()
     $(".all-navbar-2").fadeOut(1);
   });
   $(".responsive-close").click(function () {
     $(".navbar-1-all").fadeToggle(500);
     $(".navbar-1-responsive").hide(1);
     $(".hamburger-content").fadeToggle(1);
+    $("#chat-3").hide()
     $(".fiziki").toggle(10);
     $(".all-navbar-2").fadeIn(1);
     $(".all-navbar-1-bgcolor").fadeIn(1);
@@ -1736,6 +1739,18 @@ document.getElementById("qiymet-calc4").innerHTML = ((+document.getElementById("
        "--value": deyer
       });
     });
+    $(".chat-icon-2").click(function(){
+     $(".chat-3-all").fadeIn(100)
+    })
+    $("#close-chat").click(function(){
+      $(".chat-3-all").hide()
+    })
+    $(document).scroll(function() {
+      let y = $(this).scrollTop();
+      if (y > 3200) {
+        $('.chat-icon-2').fadeIn(10);
+      }
+    });
   })
   for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
     e.style.setProperty('--value', e.value);
@@ -1743,6 +1758,7 @@ document.getElementById("qiymet-calc4").innerHTML = ((+document.getElementById("
     e.style.setProperty('--max', e.max == '' ? '100' : e.max);
     e.addEventListener('input', () => e.style.setProperty('--value', e.value));
   }
+ 
 
 
  

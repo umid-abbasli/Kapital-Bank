@@ -1677,22 +1677,22 @@ input[type=range].slide-1-head.slider-progress::-ms-fill-lower {
 .scroll-2-ipoteka-head h2{
   font-size: 18px;
   color: #b4b7b9;
-  top: 20px;
+  top: 19px;
   left: 30px;
   position: absolute;
 }
 .scroll-2-ipoteka-head input[id="muddetbirbank-ipo"]{
   position: absolute;
-  font-size: 18px !important;
+  font-size: 17px !important;
   top: 13px !important;
   height: 50px !important;
   -moz-appearance: textfield;
   border: none;
   outline: none;
+  border-radius: 0 !important;
   background-color: transparent !important;
   width: 100% !important;
   left: 30px !important;
-  
   color: #000;
 }
 .scroll-2-ipoteka-head input{
@@ -2184,7 +2184,7 @@ input:not(:focus):valid ~ .floating-label {
 .section-5{
   width: 100%;
   height: calc (100);
-  margin-top: 70px;
+  margin-top: 100px;
   position: relative;
 }
 .sec-5-bg-1{
@@ -2313,7 +2313,7 @@ input:not(:focus):valid ~ .floating-label {
 }
 .section-6{
   height: calc(100 - 3vw);
-  margin-top: 35px;
+  margin-top: 35px; cursor: pointer;
 }
 .section-6-bg{
   background-color: #E8ECF1;
@@ -2625,6 +2625,10 @@ input:not(:focus):valid ~ .floating-label {
 #sec-7-etrafli{
   color: #ea5564;
   margin-top: 50px;
+  transition: .5s;
+}
+#sec-7-etrafli:hover{
+  color: #830036;
 }
 #sec-7-etrafli i{
   margin-left: 5px;
@@ -2798,6 +2802,7 @@ input:not(:focus):valid ~ .floating-label {
   position: absolute;
   width: 100%;
   z-index: 120 !important;
+  display: none;
 }
 .chat-2{
   right: 2.2%;
@@ -2810,7 +2815,6 @@ input:not(:focus):valid ~ .floating-label {
   border: 35px solid #fff;
   background-repeat: no-repeat;
   cursor: pointer;
-
 }
 .chat-2 img {
   right: 2%;
@@ -2818,11 +2822,94 @@ input:not(:focus):valid ~ .floating-label {
   height: 75px;
   border-radius: 50%;
   width: 75px;
-  bottom: 3%;
+  bottom: 3.1%;
   background-repeat: no-repeat;
   cursor: pointer;
-
 }
+.chat-3-all{
+  width: 300px;
+  border-radius: 8px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 140;
+  right: 2%;
+  bottom: 30%;
+  height: calc(100 - 3vw);
+  display: none;
+}
+.chat-3{
+  position: fixed;
+  background-color: #fff;
+  width: 300px;
+  border-radius: 8px;
+  height: calc(100 - 3vw);
+}
+.chat-3-head{
+  padding: 15px 0 10px 0;
+  background-color: rgb(244, 83, 105);
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.ch-3-h{
+  width: 53%;
+  margin-left: 43%;
+}
+.ch-3-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ch-3-head h2{
+  font-size: 22px;
+  color: #fff;
+}
+.ch-3-head i{
+  float: right;
+  font-size: 22px;
+  color: rgb(155, 155, 155);
+  cursor: pointer;
+}
+.chat-3-content{
+  text-align: center;
+  box-shadow: 0 0 10px rgb(162, 162, 162);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.chat-3-content h2{
+  font-size: 19px;
+  color:#383838;
+  padding: 40px 0 0 0;
+}
+.chat-3-content p {
+  font-size: 13px;;
+  color:#383838;
+  width: 80%;
+  margin: 0 auto 10px;
+}
+.chat-3-content input{
+  font-size: 15px;
+  width: 90%;
+  text-align: center;
+  margin: 5px auto 5px;
+  padding: 5px 0;
+  border: 1px solid #000;
+  outline: none;
+}
+.chat-3-content button{
+  background-color: #dc3545;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  padding: 2px 0;
+  width: 90%;
+  margin: 20px auto 20px;
+  transition: .5s;
+}
+
 
 
 @media only screen and (min-width: 1000px) and (max-width: 1218px) {
