@@ -1489,7 +1489,7 @@ input[type=range].slide-1-head.slider-progress::-ms-fill-lower {
 .calc-2-content-2 h2{
   font-size: 24px;
   line-height: 36px;
-  padding: 20px 0 0px 0;
+  padding: 40px 0 20px 0;
   width: 50%;
   margin: 12px auto;
   text-align: center;
@@ -1515,11 +1515,11 @@ input[type=range].slide-1-head.slider-progress::-ms-fill-lower {
   padding: 9px 20px 11px;
   font-size: 24px;
   color: #fff !important;
+  margin-top: 20px;
   text-align: center;
   border: none;
   cursor: pointer;
   margin-bottom: 0;
-  transition: .3s linear;
   background-color: #f45369;
 }
 .calc-2-content-2 button:hover{
@@ -2842,7 +2842,8 @@ input:not(:focus):valid ~ .floating-label {
   background-color: #fff;
   width: 300px;
   border-radius: 8px;
-  height: calc(100 - 3vw);
+  /* height: calc(100 - 3vw); */
+  height: 383px;
 }
 .chat-3-head{
   padding: 15px 0 10px 0;
@@ -2909,8 +2910,58 @@ input:not(:focus):valid ~ .floating-label {
   margin: 20px auto 20px;
   transition: .5s;
 }
-
-
+.chat-3-content-2{
+  background-color: transparent !important;
+  width: 100%;
+  display: none;
+  border-bottom-left-radius: 8px !important;
+  border-bottom-right-radius: 8px !important; 
+}
+.chat-3-content-2 h2{
+  font-size: 21px;
+  text-align: center;
+  padding: 80px 0 10px 0;
+  width: 80%;
+  margin: 0 auto;
+}
+.chat-3-content-2 p{
+  width: 80%;
+  margin: 0 auto;
+  font-size: 15px;
+  text-align: center;
+}
+.input-chat{
+  width: 100%;
+  margin: 120px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  background-color:  rgb(248, 248, 248);
+  border-bottom-left-radius: 8px !important;
+  border-bottom-right-radius: 8px !important; 
+}
+.input-chat input{
+  width: 70%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  margin-left: 10px;
+}
+.input-chat input::placeholder{
+  font-weight: 200;
+}
+.file-chat{
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+}
+.file-chat img[id="chat-emoji"]{
+  margin-top: 2px;
+}
+#chat-file{
+  display: none;
+}
 
 @media only screen and (min-width: 1000px) and (max-width: 1218px) {
   .containerr-2 {
@@ -3806,7 +3857,7 @@ input:not(:focus):valid ~ .floating-label {
   }
   .section-2-all {
     padding-top: 300px;
-    height: 145vh;
+    height: 112vh;
   }
   .section-2 {
     position: relative;
@@ -3841,7 +3892,7 @@ input:not(:focus):valid ~ .floating-label {
     position: relative;
   }
   .slider-2-all-content-bg {
-    height: 90vh;
+    height: 70vh;
     background-color: #e9ecf0;
   }
   .slider-2-content {
@@ -3952,9 +4003,9 @@ input:not(:focus):valid ~ .floating-label {
 
   .section-3-all {
     width: 100%;
-    min-height: 149vh;
-    height: 150vh;
-    max-height: 160vh;
+    min-height: 120vh;
+    height: 125vh;
+    max-height: 130vh;
     padding-top: 50px;
   }
   .section-3 {
@@ -3991,9 +4042,9 @@ input:not(:focus):valid ~ .floating-label {
     position: absolute;
     top: 290px;
     width: 100%;
-    min-height: calc (100 - 3vw);
-    height: 100%;
-    max-height: 100vh;
+    min-height:75vh;
+    height: 82vh;
+    max-height: 84vh;
   }
   .section-3-content-2-all {
     height: 72vh;
@@ -6702,7 +6753,7 @@ input:not(:focus):valid ~ .floating-label {
   }
   .section-2-all {
     padding-top: 300px;
-    height:151vh;
+    height:112vh;
   }
   .section-2 {
     position: relative;
@@ -6738,7 +6789,7 @@ input:not(:focus):valid ~ .floating-label {
   }
   .slider-2-all-content-bg {
     background-color: #e9ecf0;
-    height:90vh;
+    height:70vh;
   }
   .slider-2-content {
     width: 100%;
@@ -6848,9 +6899,9 @@ input:not(:focus):valid ~ .floating-label {
 
   .section-3-all {
     width: 100%;
-    min-height: 130vh;
-    height: 140vh;
-    max-height: 160vh;
+    min-height: 104vh;
+    height: 105vh;
+    max-height: 126vh;
     padding-top: 50px;
   }
   .section-3 {
@@ -6887,9 +6938,9 @@ input:not(:focus):valid ~ .floating-label {
     position: absolute;
     top: 240px;
     width: 100%;
-    min-height: 90vh;
-    max-height: 110vh;
-    height: 95vh;
+    min-height: 69vh;
+    max-height: 71vh;
+    height: 82vh;
   }
   .section-3-content-2-all {
     height: 72vh;

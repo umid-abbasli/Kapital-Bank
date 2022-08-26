@@ -1404,11 +1404,13 @@ $(document).ready(function(){
       $("#ayliq-faiz-geliri").hide()
       $("#qiymet-calc4").hide()
       $("#calc-2-content-head").html("Aylıq ödəniş")
+      $("#calc-2-content-2-button").css({"margin-top":"50px"})
     }
     else{
       $(".calc4-ayliq-faiz").show()
       $("#ayliq-faiz-geliri").show()
       $("#qiymet-calc4").show()
+      $("#calc-2-content-2-button").css({"margin-top":"30px"})
       $("#calc-2-content-head").html("Təqribi aylıq ödəniş ")
 
       
@@ -1742,6 +1744,13 @@ document.getElementById("qiymet-calc4").innerHTML = ((+document.getElementById("
     $(".chat-icon-2").click(function(){
      $(".chat-3-all").fadeIn(100)
     })
+    $("#start-chat").click(function(){
+     if($("#chat-mail").val().length > 2 ){
+      $(".chat-3-content").hide()
+      $(".chat-3-content-2").show()
+     }
+    })
+    console.log($("#chat-mail").val().length);
     $("#close-chat").click(function(){
       $(".chat-3-all").fadeOut(10)
     })
@@ -1758,6 +1767,7 @@ document.getElementById("qiymet-calc4").innerHTML = ((+document.getElementById("
     e.style.setProperty('--max', e.max == '' ? '100' : e.max);
     e.addEventListener('input', () => e.style.setProperty('--value', e.value));
   }
+ 
  
 
 
